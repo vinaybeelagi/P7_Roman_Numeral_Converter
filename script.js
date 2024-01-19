@@ -56,4 +56,8 @@ const isValid = (str, int) => {
   
     return false;
   };
-  
+  // Function to clear output and remove alert styling
+const clearOutput = () => {
+    output.innerText = '';
+    output.classList.remove('alert');
+  };
