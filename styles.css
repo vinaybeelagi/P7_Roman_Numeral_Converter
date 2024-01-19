@@ -10,4 +10,19 @@
     --danger-color: #850000;
     --danger-background: #ffadad;
   }
-  
+  *,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  padding: 50px 20px;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  background-color: var(--gray-85);
+  color: var(--gray-05);
+}
