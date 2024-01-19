@@ -32,3 +32,28 @@ const convertToRoman = num => {
 
   return res.join('');
 };
+
+// Function to validate input and display error messages
+const isValid = (str, int) => {
+    // Variable to store error text
+    let errText = '';
+  
+    // Check for invalid input (non-numeric or contains 'e')
+    if (!str || str.match(/[e.]/g)) {
+      errText = 'Please enter a valid number.';
+    } else if (int < 1) {
+      errText = 'Please enter a number greater than or equal to 1.';
+    } else if (int > 3999) {
+      errText = 'Please enter a number less than or equal to 3999.';
+    } else {
+      // No errors detected
+      return true;
+    }
+  
+    // Handle error text and output styling
+    output.innerText = errText;
+    output.classList.add('alert');
+  
+    return false;
+  };
+  
