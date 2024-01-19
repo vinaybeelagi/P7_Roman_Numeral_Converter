@@ -61,3 +61,13 @@ const clearOutput = () => {
     output.innerText = '';
     output.classList.remove('alert');
   };
+  // Event listener for form submission
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    updateUI();
+  });
+  
+  // Event listener for button click
+  convertButton.addEventListener('click', () => {
+    updateUI();
+  });
